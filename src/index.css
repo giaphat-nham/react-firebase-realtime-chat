@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* color: white; */
+
+  --clr-button-bg: #793356;
+  --clr-button-bg-hover: rgb(163, 71, 117);
+  --clr-glass-border: rgba(255, 255, 255, 0.4);
+  --clr-glass-bg: rgba(121, 51, 86, 0.4);
+  --clr-input-bg: rgba(65, 28, 46, 0.5);
+  --clr-danger: #d84040;
+  --clr-danger-hover: #d66565;
+
+  /* Hide scroll bar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  background-image: url(bg.png);
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--clr-glass-bg);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+input::placeholder {
+  color: var(--clr-glass-border);
+}
+
+div.Toastify {
+  color: #121212;
+}
+
+button,
+input,
+.username,
+.message {
+  color: white;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.loading {
+  padding: 50px;
+  font-size: 36px;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--clr-glass-bg);
+  backdrop-filter: blur(10px);
+}

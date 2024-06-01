@@ -1,0 +1,53 @@
+.modal {
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  width: max-content;
+  max-width: 400px;
+  height: max-content;
+
+  background-color: var(--clr-glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+
+  form {
+    display: flex;
+    gap: 10px;
+
+    padding: 10px;
+
+    > input {
+      flex: 1;
+
+      background-color: var(--clr-input-bg);
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+
+  button {
+    background-color: var(--clr-button-bg);
+    border: 1px solid var(--clr-glass-border);
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--clr-button-bg-hover);
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .username {
+      flex: 1;
+    }
+  }
+}

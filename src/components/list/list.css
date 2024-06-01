@@ -1,0 +1,134 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  max-width: 25%;
+  height: 100%;
+
+  color: white;
+  border-right: 1px solid var(--clr-glass-border);
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px;
+
+    img {
+      width: 50px;
+      height: auto;
+
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .username {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+
+    .search-bar {
+      background-color: var(--clr-input-bg);
+      border-radius: 5px;
+      padding: 5px;
+
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .btn-add-chat {
+      width: 20px;
+      height: 20px;
+
+      cursor: pointer;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: var(--clr-glass-border);
+        box-shadow: 0 0 0 5px var(--clr-glass-border);
+      }
+    }
+  }
+
+  .chats {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    max-width: 100%;
+
+    /* Hide scroll bar */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+
+      padding: 15px;
+      border-bottom: 1px solid var(--clr-glass-border);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--clr-glass-border);
+      }
+
+      &.unseen {
+        background-color: var(--clr-button-bg);
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .chat-info {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 5px;
+
+        overflow: hidden;
+
+        .message {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
